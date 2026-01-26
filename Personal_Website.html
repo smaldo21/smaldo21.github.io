@@ -14,42 +14,68 @@
 
 <nav class="navbar">
     <div class="logo">Steffano</div>
+
+    <!-- Hamburger menu icon -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <a href="steffano-maldonado-resume.pdf" class="resume-btn" target="_blank">Resume</a>
 </nav>
 
 <header class="hero">
     <h1>Steffano Maldonado</h1>
     <p>Information Systems student | Data Analyst | Machine Learning Enthusiast</p>
+    <a href="steffano-maldonado-resume.pdf" class="resume-btn hero-btn" target="_blank">
+        View Resume
+    </a>
 </header>
 
 <section id="about" class="section about">
     <h2>About Me</h2>
-    <p>I’m an information systems student focused on real world datasets and being able to implement ML models in order to predict and gain a better insight on data. So far I have experience with Jupyter Notebooks, Pandas, Numpy, and other libraries inside of Python. Below I've listed my machine learning and data analysis projects as well as my Kaggle where you'll be able to see my participation in the Titanic competition and Advanced Regression Techniques. </p>
+    <p>I’m an information systems student focused on real world datasets and being able to implement ML models in order to predict and gain a better insight on data. So far I have experience with Jupyter Notebooks, Pandas, Numpy, and other libraries inside of Python. Below I've listed my machine learning and data analysis projects as well as my Kaggle where you'll be able to see my participation in the Titanic competition and Advanced Regression Techniques.</p>
 </section>
 
 <section id="projects" class="section projects">
     <h2>Projects</h2>
     <div class="projects-grid">
+
         <div class="card">
-            <h3>NASA Data Analysis/ML</h3>
-            <p>Used NASA API in order to retreive exoplanet data and classified each planet into their corresponding class using radius and density. Then used Random Forest Classifier in order to predict a certain discovey method given input variables.</p>
+            <div class="card-img">
+                <img src="images/exoplanet_2.PNG" alt="NASA Project Screenshot">
+                <div class="overlay">
+                    <h3>NASA Data Analysis / ML</h3>
+                    <p>Retrieved exoplanet data and predicted discovery methods using Random Forest Classifier.</p>
+                </div>
+            </div>
             <div class="card-links">
                 <a href="Nasa_Analysis.html">View</a>
                 <a href="https://github.com/smaldo21/Exoplanet_Analytics" target="_blank">GitHub</a>
             </div>
         </div>
+
         <div class="card">
-            <h3>LA Crime Data Analysis</h3>
-            <p>Found crime patterns by downloading dataset from Data.gov and produced four graphs from the years 2020-2024 which were then analyzed.</p>
+            <div class="card-img">
+                <img src="images/la_crime_2.PNG" alt="LA Crime Project Screenshot">
+                <div class="overlay">
+                    <h3>LA Crime Data Analysis</h3>
+                    <p>Analyzed crime trends from 2020-2024 and visualized patterns effectively.</p>
+                </div>
+            </div>
             <div class="card-links">
                 <a href="LA_Crime.html">View</a>
                 <a href="https://github.com/smaldo21/LA_Crime" target="_blank">GitHub</a>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -57,10 +83,19 @@
     <h2>Contacts and Resources</h2>
     <p>Email: <a href="mailto:maldonadosteffano@gmail.com">maldonadosteffano@gmail.com</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/steffano-maldonado-2a98a3332" target="_blank">Profile</a></p>
-    <p>Github:  <a href="https://github.com/smaldo21" target="_blank">Projects</a><p>
-    <p>Kaggle: <a href="https://www.kaggle.com/smaldo2000" target="_blank">Competitions</a><p>
+    <p>Github: <a href="https://github.com/smaldo21" target="_blank">Projects</a></p>
+    <p>Kaggle: <a href="https://www.kaggle.com/smaldo2000" target="_blank">Competitions</a></p>
 </section>
 
-<script src="script.js"></script>
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+</script>
+
 </body>
 </html>
+
